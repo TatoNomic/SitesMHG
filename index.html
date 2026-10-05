@@ -96,14 +96,14 @@
             <div class="h-6 w-px bg-slate-800"></div>
             <!-- Workstream Legend Pills -->
             <div class="hidden sm:flex items-center gap-2.5 text-[11px] font-medium">
-                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-300">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> EIM: <b id="stat-eim-count">27</b>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-300" title="Early Intervention Mission (MHM and MHG)">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> Early Intervention Mission (MHM & MHG): <b id="stat-eim-count">27</b>
                 </span>
-                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-yellow-400/10 border border-yellow-400/20 text-yellow-300">
-                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span> MHM: <b id="stat-mhm-count">5</b>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-yellow-400/10 border border-yellow-400/20 text-yellow-300" title="Mood Disorders Network (MHM)">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span> Mood Disorders Network (MHM): <b id="stat-mhm-count">5</b>
                 </span>
-                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-red-500/10 border border-red-500/20 text-red-300">
-                    <span class="w-2 h-2 rounded-full bg-red-500"></span> GLAD: <b id="stat-glad-count">6</b>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-red-500/10 border border-red-500/20 text-red-300" title="GLAD (MHG)">
+                    <span class="w-2 h-2 rounded-full bg-red-500"></span> GLAD (MHG): <b id="stat-glad-count">6</b>
                 </span>
             </div>
         </div>
@@ -117,15 +117,15 @@
                 <button id="ws-btn-ALL" onclick="setWorkstream('ALL')" 
                     class="px-3 py-1 rounded-md font-semibold transition bg-indigo-600 text-white shadow-sm">All (38)</button>
                 <button id="ws-btn-MHM_GLAD" onclick="setWorkstream('MHM_GLAD')" 
-                    class="px-3 py-1 rounded-md font-semibold transition text-amber-300 hover:text-white flex items-center gap-1.5">
-                    <i class="fa-solid fa-layer-group text-[10px]"></i> MHM + GLAD (11)
+                    class="px-3 py-1 rounded-md font-semibold transition text-amber-300 hover:text-white flex items-center gap-1.5" title="Mood Disorders Network (MHM) + GLAD (MHG)">
+                    <i class="fa-solid fa-layer-group text-[10px]"></i> Mood Disorders & GLAD (11)
                 </button>
                 <button id="ws-btn-EIM" onclick="setWorkstream('EIM')" 
-                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white">EIM (27)</button>
+                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white" title="Early Intervention Mission (MHM and MHG)">Early Intervention Mission (MHM and MHG) (27)</button>
                 <button id="ws-btn-MHM" onclick="setWorkstream('MHM')" 
-                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white">MHM (5)</button>
+                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white" title="Mood Disorders Network (MHM)">Mood Disorders Network (MHM) (5)</button>
                 <button id="ws-btn-GLAD" onclick="setWorkstream('GLAD')" 
-                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white">GLAD (6)</button>
+                    class="px-3 py-1 rounded-md font-semibold transition text-slate-300 hover:text-white" title="GLAD (MHG)">GLAD (MHG) (6)</button>
             </div>
         </div>
 
@@ -244,7 +244,7 @@
                 <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-[11px]">
                     <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800">
                         <span class="text-slate-500 block text-[10px] uppercase font-bold">Workstream</span>
-                        <b id="banner-hub-stream" class="text-indigo-300 font-semibold">EIM</b>
+                        <b id="banner-hub-stream" class="text-indigo-300 font-semibold leading-tight block text-[11px]">EIM</b>
                     </div>
                     <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800">
                         <span class="text-slate-500 block text-[10px] uppercase font-bold">Buffer Pop (<span id="banner-radius-val">25</span>m)</span>
@@ -254,7 +254,7 @@
             </div>
 
             <!-- Floating Legend Box -->
-            <div class="absolute bottom-5 right-5 z-[400] bg-slate-900/95 backdrop-blur-md border border-slate-800/90 p-3.5 rounded-2xl shadow-2xl text-xs space-y-2 max-w-xs pointer-events-auto">
+            <div class="absolute bottom-5 right-5 z-[400] bg-slate-900/95 backdrop-blur-md border border-slate-800/90 p-3.5 rounded-2xl shadow-2xl text-xs space-y-2 max-w-sm pointer-events-auto">
                 <div class="font-bold text-slate-200 border-b border-slate-800 pb-1.5 flex items-center justify-between">
                     <span class="flex items-center gap-1.5">
                         <i class="fa-solid fa-layer-group text-indigo-400"></i> Workstreams & Tiers
@@ -263,15 +263,15 @@
                 </div>
                 <div class="flex items-center gap-2.5 text-slate-300">
                     <span class="w-3.5 h-3.5 rounded-full bg-blue-500 border border-white/30 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
-                    <span><strong>EIM</strong> — Early Intervention (27)</span>
+                    <span><strong>Early Intervention Mission (MHM and MHG)</strong> (27)</span>
                 </div>
                 <div class="flex items-center gap-2.5 text-slate-300">
                     <span class="w-3.5 h-3.5 rounded-full bg-yellow-400 border border-white/30 shrink-0 shadow-[0_0_8px_rgba(234,179,8,0.6)]"></span>
-                    <span><strong>MHM</strong> — Mental Health Mission (5)</span>
+                    <span><strong>Mood Disorders Network (MHM)</strong> (5)</span>
                 </div>
                 <div class="flex items-center gap-2.5 text-slate-300">
                     <span class="w-3.5 h-3.5 rounded-full bg-red-500 border border-white/30 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.6)]"></span>
-                    <span><strong>GLAD</strong> — Genetic Links Anxiety & Dep. (6)</span>
+                    <span><strong>GLAD (MHG)</strong> (6)</span>
                 </div>
                 <div class="pt-1.5 border-t border-slate-800/80 text-[10px] text-slate-400 flex items-center gap-1.5">
                     <i class="fa-solid fa-circle-info text-indigo-400"></i>
@@ -282,6 +282,18 @@
     </div>
 
     <script>
+        // Full workstream nomenclature mappings
+        const workstreamFullNames = {
+            'EIM': 'Early Intervention Mission (MHM and MHG)',
+            'MHM': 'Mood Disorders Network (MHM)',
+            'GLAD': 'GLAD (MHG)'
+        };
+        const workstreamShortNames = {
+            'EIM': 'EIM (MHM & MHG)',
+            'MHM': 'Mood Disorders (MHM)',
+            'GLAD': 'GLAD (MHG)'
+        };
+
         // Complete, validated dataset of all 38 NHS research sites
         const siteData = [
             // EIM Workstream (27 Sites)
@@ -481,6 +493,7 @@
         function createPinIcon(site, isSelected = false, dx = 0, dy = 0) {
             const color = getWorkstreamColor(site.workstream);
             const tierNum = getTierNumber(site.tier);
+            const shortWsLabel = workstreamShortNames[site.workstream] || site.workstream;
 
             if (activePinStyle === 'pin') {
                 const svgHtml = `
@@ -505,15 +518,15 @@
                     <div class="hub-pin-wrapper ${isSelected ? 'active-selected' : ''} inline-flex items-center bg-slate-900 border border-slate-700 rounded-full px-2 py-0.5 gap-1.5 shadow-xl select-none"
                          style="border-color: ${color}; box-shadow: 0 4px 14px rgba(0,0,0,0.8), 0 0 10px ${color}33;">
                         <span class="w-2 h-2 rounded-full" style="background-color: ${color};"></span>
-                        <span class="font-extrabold text-[10px] text-white tracking-wide">${site.workstream}</span>
+                        <span class="font-extrabold text-[10px] text-white tracking-wide whitespace-nowrap">${shortWsLabel}</span>
                         <span class="text-[10px] font-bold px-1 rounded font-mono-num" style="background:${color}22; color:${color};">T${tierNum}</span>
                     </div>
                 `;
                 return L.divIcon({
                     className: 'custom-pill-marker',
                     html: pillHtml,
-                    iconSize: [68, 22],
-                    iconAnchor: [34 - dx, 11 - dy],
+                    iconSize: [120, 24],
+                    iconAnchor: [60 - dx, 12 - dy],
                     popupAnchor: [dx, -14 + dy]
                 });
             }
@@ -530,10 +543,11 @@
 
             if (searchQuery) {
                 const q = searchQuery.toLowerCase();
+                const fullName = (workstreamFullNames[site.workstream] || '').toLowerCase();
                 const matchName = site.name.toLowerCase().includes(q);
                 const matchCity = site.city.toLowerCase().includes(q);
                 const matchTier = site.tier.toLowerCase().includes(q);
-                const matchWs = site.workstream.toLowerCase().includes(q);
+                const matchWs = site.workstream.toLowerCase().includes(q) || fullName.includes(q);
                 if (!matchName && !matchCity && !matchTier && !matchWs) return false;
             }
 
@@ -618,12 +632,13 @@
             const dynamicPop = getDynamicPop(site.basePop25, activeRadiusMiles);
             const color = getWorkstreamColor(site.workstream);
             const tierNum = getTierNumber(site.tier);
+            const fullWsName = workstreamFullNames[site.workstream] || site.workstream;
 
             const banner = document.getElementById('selected-hub-banner');
             banner.classList.remove('hidden');
             document.getElementById('banner-hub-name').innerText = site.name;
             document.getElementById('banner-hub-city').innerHTML = `<i class="fa-solid fa-location-dot text-indigo-400"></i> ${site.city}`;
-            document.getElementById('banner-hub-stream').innerText = site.workstream;
+            document.getElementById('banner-hub-stream').innerText = fullWsName;
             document.getElementById('banner-hub-stream').style.color = color;
             document.getElementById('banner-radius-val').innerText = activeRadiusMiles;
             document.getElementById('banner-hub-pop').innerText = dynamicPop.toLocaleString();
@@ -684,6 +699,7 @@
                 const tierNum = getTierNumber(site.tier);
                 const dynamicPop = getDynamicPop(site.basePop25, activeRadiusMiles);
                 const isSelected = selectedSiteId === site.id;
+                const fullWsName = workstreamFullNames[site.workstream] || site.workstream;
 
                 const card = document.createElement('div');
                 card.id = `site-card-${site.id}`;
@@ -709,17 +725,19 @@
                                 </span>
                             </div>
                         </div>
-                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border shrink-0 font-mono-num" 
-                              style="background:${color}15; color:${color}; border-color:${color}33;">
-                            ${site.workstream}
-                        </span>
                     </div>
 
-                    <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-slate-900 text-[11px]">
-                        <span class="text-slate-400 font-mono text-[10px] bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
-                            ${site.tier}
-                        </span>
-                        <div class="text-right">
+                    <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-slate-900 text-[11px] gap-2">
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="text-slate-400 font-mono text-[10px] bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+                                ${site.tier}
+                            </span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border shrink-0" 
+                                  style="background:${color}15; color:${color}; border-color:${color}33;">
+                                ${fullWsName}
+                            </span>
+                        </div>
+                        <div class="text-right shrink-0">
                             <span class="font-mono-num text-emerald-400 font-bold text-xs">${dynamicPop.toLocaleString()}</span>
                             <span class="text-[9px] text-slate-500 block leading-tight">@ ${activeRadiusMiles}m radius</span>
                         </div>
